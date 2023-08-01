@@ -10,28 +10,32 @@ const WelcomeScreen = () => {
   const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        
+        <View style={styles.header}>
+          <Text style={[styles.headerText, _styles.zovFAkQa]}>{"Welcome to Golf Score"}</Text>
+        </View>
+
         <View style={[styles.group, _styles.XTglPLpv]}>
-          <Image style={[_styles2.rcjvndBa, _styles.XTglPLpv]} source={{
-          uri: "https://tinyurl.com/42evm3m3"
-        }} />
-          
+          <Image style={[_styles2.rcjvndBa, _styles.XTglPLpv]} source={require("./golf-15.png")} resizeMode="cover" />
+
           <TouchableOpacity style={[styles.button, _styles.XTglPLpv]} onPress={() => {
           navigation.navigate("ScreenAI2");
-        }}>
-            
-          </TouchableOpacity>
+        }}></TouchableOpacity>
           <TouchableOpacity style={[styles.button, _styles.XTglPLpv]} onPress={() => {
           navigation.navigate("ScreenAI3");
-        }}>
-            
-          </TouchableOpacity>
+        }}></TouchableOpacity>
         </View>
-        
-      <Pressable onPress={() => {
+
+        <Pressable onPress={() => {
         navigation.navigate("ScreenAI2");
-      }}><View style={_styles.GdJwQLrW}><Text style={_styles.OoIcwtna}>{"Enter Score"}</Text></View></Pressable><ImageBackground source={require("./golf-15.png")} resizeMode="cover"></ImageBackground></ScrollView>
-    <View style={_styles.NZIgEWzZ}></View></SafeAreaView>;
+      }}>
+          <View style={_styles.GdJwQLrW}>
+            <Text style={_styles.OoIcwtna}>{"Enter Score"}</Text>
+          </View>
+        </Pressable>
+        <ImageBackground source={require("./golf-15.png")} resizeMode="cover"></ImageBackground>
+      <View style={_styles.VeHHOVgV}></View></ScrollView>
+      <View style={_styles.NZIgEWzZ}></View>
+    </SafeAreaView>;
 };
 
 export default WelcomeScreen;
@@ -44,8 +48,8 @@ const _styles = StyleSheet.create({
     backgroundColor: "#788fea",
     borderColor: "#788fea",
     position: "absolute",
-    top: -45,
-    left: -57.5,
+    top: -215,
+    left: -58,
     flexDirection: "row",
     flex: 1,
     justifyContent: "space-between"
@@ -69,6 +73,20 @@ const _styles = StyleSheet.create({
   },
   XTglPLpv: {
     backgroundColor: "#362626"
+  },
+  zovFAkQa: {
+    fontSize: 25,
+    fontFamily: "Merriweather"
+  },
+  VeHHOVgV: {
+    width: 115,
+    height: 45,
+    borderRadius: 4,
+    backgroundColor: "#788FEA",
+    borderColor: "#788FEA",
+    position: "absolute",
+    left: 121,
+    top: 228
   }
 });
 
