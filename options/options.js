@@ -1,10 +1,11 @@
 export const globalOptions = {
-  name: "bryan-test-2-41882",
-  url: "https://bryan-test-2-41882.botics.co",
-  api: "https://bryan-test-2-41882.botics.co/api/v1",
-  screenOptions: {
-    headerShown: false
-  }
+  "name": "bryan-test-2-41882",
+  "url": "https://bryan-test-2-41882.botics.co",
+  "api": "https://bryan-test-2-41882.botics.co/api/v1",
+  "screenOptions": {
+    "headerShown": false
+  },
+  "initialRoute": "ScreenAI2"
 };
 export const modulesOptions = {
   "@modules/app-menu": {

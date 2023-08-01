@@ -1,31 +1,31 @@
-import React from 'react';
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
-const scores = [{
-  course: 'Math',
-  date: '2022-01-01',
-  score: 95
+import React from "react";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+const golfCourses = [{
+  name: "Pebble Beach",
+  location: "California",
+  par: 72
 }, {
-  course: 'Science',
-  date: '2022-01-02',
-  score: 85
+  name: "Augusta National",
+  location: "Georgia",
+  par: 72
 }, {
-  course: 'English',
-  date: '2022-01-03',
-  score: 90
+  name: "St. Andrews",
+  location: "Scotland",
+  par: 72
 }, {
-  course: 'History',
-  date: '2022-01-04',
-  score: 75
+  name: "Cypress Point",
+  location: "California",
+  par: 72
 }];
 
-const ScoreScreen = () => {
+const GolfCourseScreen = () => {
   return <SafeAreaView style={styles.container}>
-      {scores.map((score, index) => <View key={index} style={styles.scoreContainer}>
-          <View style={styles.courseContainer}>
-            <Text style={styles.courseText}>{score.course}</Text>
-            <Text style={styles.dateText}>{score.date}</Text>
+      {golfCourses.map((course, index) => <View key={index} style={styles.courseContainer}>
+          <View style={styles.courseInfo}>
+            <Text style={styles.courseName}>{course.name}</Text>
+            <Text style={styles.courseLocation}>{course.location}</Text>
           </View>
-          <Text style={styles.scoreText}>{score.score}</Text>
+          <Text style={styles.coursePar}>{course.par}</Text>
         </View>)}
     </SafeAreaView>;
 };
@@ -33,31 +33,30 @@ const ScoreScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     paddingHorizontal: 16
   },
-  scoreContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  courseContainer: {
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 16
   },
-  courseContainer: {
-    flexDirection: 'column'
+  courseInfo: {
+    flex: 1
   },
-  courseText: {
+  courseName: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#000'
+    fontWeight: "bold",
+    color: "#000"
   },
-  dateText: {
+  courseLocation: {
     fontSize: 14,
-    color: '#888'
+    color: "#888"
   },
-  scoreText: {
+  coursePar: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#000'
+    fontWeight: "bold",
+    color: "#000"
   }
 });
-export default ScoreScreen;
+export default GolfCourseScreen;
