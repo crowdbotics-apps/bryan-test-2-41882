@@ -1,3 +1,4 @@
+import { ImageBackground } from "react-native";
 import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
@@ -9,30 +10,28 @@ const WelcomeScreen = () => {
   const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.group} />
-        <View style={styles.group}>
-          <Image style={styles.logo} source={{
+        
+        <View style={[styles.group, _styles.XTglPLpv]}>
+          <Image style={[_styles2.rcjvndBa, _styles.XTglPLpv]} source={{
           uri: "https://tinyurl.com/42evm3m3"
         }} />
-          <Text style={styles.text}>
-            Let's build something amazing together!
-          </Text>
-          <TouchableOpacity style={styles.button} onPress={() => {
+          
+          <TouchableOpacity style={[styles.button, _styles.XTglPLpv]} onPress={() => {
           navigation.navigate("ScreenAI2");
         }}>
-            <Text style={styles.buttonText}>Enter Score</Text>
+            
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => {
+          <TouchableOpacity style={[styles.button, _styles.XTglPLpv]} onPress={() => {
           navigation.navigate("ScreenAI3");
         }}>
-            <Text style={styles.buttonText}>View Scores</Text>
+            
           </TouchableOpacity>
         </View>
-        <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
+        
       <Pressable onPress={() => {
         navigation.navigate("ScreenAI2");
-      }}><View style={_styles.GdJwQLrW}><Text style={_styles.OoIcwtna}>{"Enter Score"}</Text></View></Pressable></ScrollView>
-    </SafeAreaView>;
+      }}><View style={_styles.GdJwQLrW}><Text style={_styles.OoIcwtna}>{"Enter Score"}</Text></View></Pressable><ImageBackground source={require("./golf-15.png")} resizeMode="cover"></ImageBackground></ScrollView>
+    <View style={_styles.NZIgEWzZ}></View></SafeAreaView>;
 };
 
 export default WelcomeScreen;
@@ -43,7 +42,13 @@ const _styles = StyleSheet.create({
     height: 45,
     borderRadius: 4,
     backgroundColor: "#788fea",
-    borderColor: "#788fea"
+    borderColor: "#788fea",
+    position: "absolute",
+    top: -45,
+    left: -57.5,
+    flexDirection: "row",
+    flex: 1,
+    justifyContent: "space-between"
   },
   OoIcwtna: {
     width: 77,
@@ -57,5 +62,19 @@ const _styles = StyleSheet.create({
     position: "absolute",
     top: 12,
     left: 19
+  },
+  NZIgEWzZ: {
+    width: 356,
+    height: 65
+  },
+  XTglPLpv: {
+    backgroundColor: "#362626"
+  }
+});
+
+const _styles2 = StyleSheet.create({
+  rcjvndBa: {
+    position: "absolute",
+    top: 0
   }
 });
