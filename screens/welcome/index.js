@@ -18,7 +18,7 @@ const WelcomeScreen = () => {
 
         
         
-      <View style={_styles.kTyPLqOw}></View></ScrollView>
+      <View style={_styles.kTyPLqOw}><Text style={_styles.nepGErMS}>{"Enter Score"}</Text></View><View style={_styles.PKqZRmPX}><Text style={_styles.uIrHcYhr}>{"View Scores\n"}</Text></View></ScrollView>
       <View style={_styles.NZIgEWzZ}></View>
     </SafeAreaView>;
 };
@@ -39,6 +39,48 @@ const _styles = StyleSheet.create({
     height: 51,
     position: "absolute",
     left: 120.5,
-    top: 260
+    top: 260,
+    backgroundColor: "#b1bde0",
+    borderRadius: 4
+  },
+  nepGErMS: {
+    width: 117,
+    height: 20,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    textAlign: "center",
+    position: "absolute",
+    left: -1,
+    top: 15,
+    flexDirection: "row",
+    flex: 1,
+    alignItems: "center",
+    fontWeight: "700"
+  },
+  PKqZRmPX: {
+    width: 115,
+    height: 45,
+    position: "absolute",
+    left: 123,
+    top: 320,
+    backgroundColor: "#b1bde0",
+    borderRadius: 4
+  },
+  uIrHcYhr: {
+    width: 115,
+    height: 22,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    textAlign: "center",
+    fontWeight: "700",
+    flexDirection: "row",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    left: 0,
+    top: 14
   }
 });
