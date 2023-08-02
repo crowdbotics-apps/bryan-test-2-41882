@@ -8,7 +8,7 @@ const WelcomeScreen = () => {
   const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView} onPress={() => {
-      navigation.navigate("ScreenAI3");
+      navigation.navigate("ScreenAI2");
     }}>
         <View style={styles.header}>
           <Text style={[styles.headerText, _styles.zovFAkQa]}>{"Welcome to Golf Score"}</Text>
