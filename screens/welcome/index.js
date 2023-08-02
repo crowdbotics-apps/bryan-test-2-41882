@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import React from "react";
@@ -19,7 +20,9 @@ const WelcomeScreen = () => {
         
         
       <View style={_styles.kTyPLqOw}><Text style={_styles.nepGErMS}>{"Enter Score"}</Text></View><View style={_styles.PKqZRmPX}><Text style={_styles.uIrHcYhr}>{"View Scores\n"}</Text></View></ScrollView>
-      <View style={_styles.NZIgEWzZ}></View>
+      <View style={_styles.NZIgEWzZ}><Pressable onPress={() => {
+        navigation.navigate("aboutTheApp");
+      }}><Text style={_styles.aOLNAPxu}>{"About"}</Text></Pressable></View>
     </SafeAreaView>;
 };
 
@@ -82,5 +85,16 @@ const _styles = StyleSheet.create({
     position: "absolute",
     left: 0,
     top: 14
+  },
+  aOLNAPxu: {
+    width: 100,
+    height: 18,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    position: "absolute",
+    left: 129,
+    textAlign: "center",
+    top: 36
   }
 });
