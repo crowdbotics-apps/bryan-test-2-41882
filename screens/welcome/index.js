@@ -33,8 +33,10 @@ const WelcomeScreen = () => {
           </View>
         </Pressable>
         <ImageBackground source={require("./golf-15.png")} resizeMode="cover"></ImageBackground>
-      <View style={_styles.VeHHOVgV}></View></ScrollView>
-      <View style={_styles.NZIgEWzZ}></View>
+      <View style={_styles.VeHHOVgV}><Text style={_styles.HzavToGO}>{"View Scores"}</Text></View></ScrollView>
+      <View style={_styles.NZIgEWzZ}><Pressable onPress={() => {
+        navigation.navigate("aboutTheApp");
+      }}><Text style={_styles.RFgNPwYe}>{"About"}</Text></Pressable></View>
     </SafeAreaView>;
 };
 
@@ -55,7 +57,7 @@ const _styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   OoIcwtna: {
-    width: 77,
+    width: 87,
     height: 22,
     lineHeight: 17,
     fontSize: 14,
@@ -64,8 +66,8 @@ const _styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "700",
     position: "absolute",
-    top: 12,
-    left: 19
+    top: 13,
+    left: 14
   },
   NZIgEWzZ: {
     width: 356,
@@ -87,6 +89,30 @@ const _styles = StyleSheet.create({
     position: "absolute",
     left: 121,
     top: 228
+  },
+  HzavToGO: {
+    width: 100,
+    height: 17,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    fontFamily: "inherit",
+    color: "#ffffff",
+    fontWeight: "700",
+    textAlign: "center",
+    position: "absolute",
+    left: 8,
+    top: 13
+  },
+  RFgNPwYe: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    position: "absolute",
+    left: 128,
+    textAlign: "center"
   }
 });
 
